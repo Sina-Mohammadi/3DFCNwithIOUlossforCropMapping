@@ -3,23 +3,23 @@ from tensorflow.keras import backend as K
 
 def IOU(y_true, y_pred):
     
-    eps   = K.constant(1e-22, dtype='float32')
-    losses=[]
+    epsilon   = K.constant(1e-22, dtype='float32')
+    losses = []
 
     for j in range(3):
 
-        y_true1 = y_true[...,j:j+1]
-        y_true1  = K.batch_flatten(y_true1)
+        y_true = y_true[...,j:j+1]
+        y_true = K.batch_flatten(y_true)
 
-        y_pred1 = y_pred[...,j:j+1] 
-        y_pred1  = K.batch_flatten(y_pred1)
+        y_pred = y_pred[...,j:j+1] 
+        y_pred = K.batch_flatten(y_pred)
 
-        I = K.sum(y_pred1 * y_true1 , axis=-1)
-        U        = K.sum(y_pred1+y_true1 -(y_pred1 * y_true1) , axis=-1) 
-        IOU   = I / (U + eps)
-        Mean_IOU   = K.mean(IOU)
-        IOU_Loss1 =1-Mean_IOU
-        losses.append(IOU_Loss1)
+        I = K.sum(y_pred * y_true , axis=-1)
+        U = K.sum(y_pred + y_true -(y_pred * y_true) , axis=-1) 
+        IOU = I / (U + epsilon)
+        Mean_IOU = K.mean(IOU)
+        IOU_Loss = 1 - Mean_IOU
+        losses.append(IOU_Loss)
 
 
     return K.sum(losses)
