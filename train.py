@@ -30,11 +30,6 @@ def args():
 
 
 
-
-
-
-
-
 if __name__ == "__main__":
 
 
@@ -90,8 +85,6 @@ if __name__ == "__main__":
     val_batches   = batch_generator((val_images, val_lables), batch_size = cfg.batch_size)
     
 
-
-
     
     if cfg.loss_function == 'IOU':
         
@@ -111,8 +104,6 @@ if __name__ == "__main__":
     model = FCN_3D()
     model.compile(optimizer = SGD(lr = cfg.learning_rate, momentum = 0.9), loss = loss_function, metrics = ["accuracy"])
     
-
-
 
 
 
