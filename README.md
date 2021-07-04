@@ -12,7 +12,7 @@ Our paper is accepted to IGARSS 2021 and  can be found at: [arXiv](https://arxiv
 If you want to train the model, you can run:
 
 ```
-python train.py --data_dir 'data' save_dir 'save' --loss_function 'IOU' --validation_fold 5
+python train.py --data_dir 'data' --save_dir 'save' --loss_function 'IOU' --validation_fold 5
 ```
 
 In addition to *data_dir*, *save_dir*, loss_function, and validation_fold, you can set these training configurations: *batch_size, learning_rate, epochs,*
