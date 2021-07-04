@@ -15,7 +15,7 @@ If you want to train the model, you can run:
 python train.py --data_dir 'data' --save_dir 'save' --loss_function 'IOU' --validation_fold 5
 ```
 
-In addition to *data_dir*, *save_dir*, loss_function, and validation_fold, you can set these training configurations: *batch_size, learning_rate, epochs,*
+In addition to *data_dir*, *save_dir*, loss_function, and validation_fold, you can set these training configurations: *batch_size, learning_rate, epochs.*
 
 ## Citation
 ```
