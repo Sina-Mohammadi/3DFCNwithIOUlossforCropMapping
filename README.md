@@ -9,7 +9,7 @@ Our paper is accepted to IGARSS 2021 and  can be found at: [arXiv](https://arxiv
 - [tables 3.6.1](https://www.pytables.org/)
 
 
-If you want to train the model, first download the preprocessed data from [GoogleDrive](https://drive.google.com/file/d/1eql-2OsG9mr8fOUi3SMi19HELzzVbbCj/view?usp=sharing), and then run:
+If you want to train the model using first 4 folds, first download the preprocessed data from [GoogleDrive](https://drive.google.com/file/d/1eql-2OsG9mr8fOUi3SMi19HELzzVbbCj/view?usp=sharing), and then run:
 
 ```
 python train.py --data_dir 'data' --save_dir 'save' --loss_function 'IOU' --validation_fold 5
