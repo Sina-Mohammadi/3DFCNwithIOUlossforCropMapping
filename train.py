@@ -8,7 +8,7 @@ import tables
 import random
 from numpy.random import seed
 from model import FCN_3D
-from loss import IOU
+from IOU_loss import IOU
 
 seed(1)
 tensorflow.random.set_seed(1)
