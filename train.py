@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     cfg = args()
     
-    hdf5_file = tables.open_file(cfg.data_dir+'/data201720162015_1700_SiteA_128.hdf5', mode='r+')
+    hdf5_file = tables.open_file(cfg.data_dir+'/data201720162015.hdf5', mode='r+')
     
     folds = [0,118,236,354,471,588]
     i = np.arange(588)
